@@ -1,11 +1,33 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <!-- Base application theme. -->
+    <style name="AppTheme.Base" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
+        <!--If you are using revision 22.1 please use just windowNoTitle. Without android:-->
+        <item name="windowNoTitle">true</item><!--无标题-->
+        <!--We will be using the toolbar so no need to show ActionBar-->
+        <item name="windowActionBar">false</item>
+        <!-- colorPrimary is used for the default action bar background -->
         <item name="colorPrimary">@color/colorPrimary</item>
+        <!-- colorPrimaryDark is used for the status bar -->
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <!-- colorAccent is used as the default value for colorControlActivated
+       which is used to tint widgets -->
         <item name="colorAccent">@color/colorAccent</item>
+        <!-- You can also set colorControlNormal, colorControlActivated
+         colorControlHighlight and colorSwitchThumbNormal. -->
+        <!--<item name="android:windowIsTranslucent">true</item>&lt;!&ndash;半透明&ndash;&gt;-->
+        <!--windowIsTranslucent makes the background of app transparent-->
+        <!--<item name="android:actionMenuTextAppearance">@style/TextAppearance.AppCompat.Widget.ActionBar.Menu</item>-->
+        <!--actionMenuTextAppearance makes the wrong toolbar looks normal which may has a gradient black top background , seems it's no use-->
     </style>
 
+    <!--style for zxing-->
+    <style name="CaptureTheme" parent="AppTheme.Base">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="android:windowActionModeOverlay">true</item>
+    </style>
 </resources>
